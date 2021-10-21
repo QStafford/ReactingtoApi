@@ -1,0 +1,14 @@
+button {
+    position: static;
+}
+.card {
+    width: 18rem;
+    float: left;
+    flex: content;
+}
+#people {
+    background-color: darkorchid;
+}
+#film {
+    background-color: darkgoldenrod;
+}

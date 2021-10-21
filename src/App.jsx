@@ -1,5 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import "./App.css"
+
 const App = () => {
     const [films, setFilms] = useState([]);
     const [people, setPeople] = useState([]);
@@ -24,7 +26,7 @@ const App = () => {
             <h1>Films and Stars</h1>
             <button onClick={getFilms}>Load Films!</button>
             {films.map(films => <div className="col-md-6" key={films.id}>
-                <div className="card shadow my-2">
+                <div className="card shadow my-2" id="film">
                     <div className="card-body">
                         <h4 className="card-title">{films.title}</h4>
                         <p className="cardsubtitle text-muted">Original title: {films.original_title_romanised}</p>
@@ -35,7 +37,7 @@ const App = () => {
             )}
             <button onClick={getPpl}>Load People!</button>
             {people.map(people => <div className="col-md-6" key={people.name}>
-                <div className="card">
+                <div className="card" id="people">
                     <div className="card-body">
                         <h4 className="card-title">{people.name}</h4>
                         <p className="cardsubtitle text-muted">{people.gender}</p>
